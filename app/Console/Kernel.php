@@ -30,7 +30,7 @@ class Kernel extends ConsoleKernel
         $schedule->call(function () {
             $service = new ParserService();
             $service->parser();
-        })->twiceDaily(7, 19);
+        })->hourly();
         
         // $schedule->call(function () {
         //     $service = new SendingCommand(TelegramService::getTelegram());
